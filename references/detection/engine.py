@@ -106,5 +106,7 @@ def evaluate(model, data_loader, device):
     # accumulate predictions from all images
     coco_evaluator.accumulate()
     coco_evaluator.summarize()
+    # AÑADIDO _______________________________________________________________________________
+    validation_stats = coco_evaluator.summarize._summarizeDets()
     torch.set_num_threads(n_threads)
-    return coco_evaluator
+    return coco_evaluator,validation_stats
