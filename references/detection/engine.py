@@ -108,5 +108,7 @@ def evaluate(model, data_loader, device):
     coco_evaluator.summarize()
     # AÑADIDO _______________________________________________________________________________
     validation_stats = coco_evaluator.summarize._summarizeDets()
+    print(validation_stats)
+    # ______________________________________________________________________________________
     torch.set_num_threads(n_threads)
     return coco_evaluator,validation_stats
