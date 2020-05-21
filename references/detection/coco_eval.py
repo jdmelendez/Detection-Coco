@@ -61,7 +61,7 @@ class CocoEvaluator(object):
             
  ########################## AÑADIDO #################################################
 
-    def validation(seld):
+    def validation(self):
         coco_eval.validation()
         
  ########################## AÑADIDO #################################################
